@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla con PHP</title>
+</head>
+<body>
+    <h2>Ingresa los datos</h2>
+    <form method="post" action="RdatosPatria.php">
+        <label for="date">Fecha de nacimiento:</label>
+        <input type="date" name="date" id="date" required><br><br>
+
+        <label for="telefono">Telefono:</label>
+        <input type="text" name="telefono" id="telefono" required><br><br>
+
+        <label for="Tpersona">Tipo de persona:</label>
+        <select type="text" name="Tpersona" id="Tpersona"><br><br>
+        <option value="Masculino">Jefe</option>
+        <option value="Femenino">Miembro</option></select><br><br>
+
+        <label for="email">Correo Electronico:</label>
+        <input type="email" name="email" id="email" required><br><br>
+
+        <label for="manzana">¿Es manzanero?:</label>
+        <select type="text" name="manzana" id="manzana"><br><br>
+        <option value="Si">Masculino</option>
+        <option value="No">Femenino</option> </select><br><br>
+
+        <label for="code">Codigo:</label>
+        <input type="number" name="code" id="code" required><br><br>
+
+        <label for="serial">Serial:</label>
+        <input type="number" name="serial1" id="serial1" required><br><br>
+        
+        <label for="Nintegrantes">Numero de integrantes de la familia:</label>
+        <input type="number" name="Nintegrantes" id="Nintegrantes" required><br><br>
+
+        </select><br><br>
+
+        <input type="submit" value="Agregar">
+    </form>
+</body>
+</html>

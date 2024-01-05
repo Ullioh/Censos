@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla con PHP</title>
+</head>
+<body>
+    <h2>Ingresa los datos</h2>
+    <form method="post" action="registroclap.php">
+        <label for="manzana">N de manzana:</label>
+        <input type="text" name="manzana" id="manzana" required><br><br>
+
+        <label for="grupo">Grupo familiar:</label>
+        <input type="text" name="grupo" id="grupo" required><br><br>
+
+        <label for="nacionalidad">Nacionalidad:</label>
+        <input type="text" name="nacionalidad" id="nacionalidad" required><br><br>
+
+        <label for="cedula">Cédula de identidad:</label>
+        <input type="text" name="cedula" id="cedula" required><br><br>
+
+        <label for="nombre">Nombre y apellido:</label>
+        <input type="text" name="nombre" id="nombre" required><br><br>
+
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad" id="edad" required><br><br>
+
+        <label for="sexo">Sexo:</label>
+        <select name="sexo" id="sexo">
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+        </select><br><br>
+
+        <input type="submit" value="Agregar">
+    </form>
+</body>
+</html>
