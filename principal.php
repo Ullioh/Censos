@@ -1,5 +1,5 @@
 <?php
-    $conexion=mysqli_connect('localhost','root','','censos')
+    $conexion=mysqli_connect('localhost','root','','censos');
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +39,8 @@
     <div class="btn-container">
       <button class="btn btn-primary"><a href="RdatosClap.html" style="color: white;">Registrar Persona</a></button>
     </div>
-    <table class="table table-striped table-bordered">
+    <input type="text" id="busquedaClap" class="form-control mb-2" placeholder="Buscar en la tabla...">
+    <table id="datosClapTabla" class="table table-striped table-bordered">
       <thead class="thead-dark">
         <tr>
           <th>N de manzana</th>
@@ -88,7 +89,8 @@
     <div class="btn-container">
       <button class="btn btn-primary"><a href="RdatosPatria.html" style="color: white;">Registrar Persona</a></button>
     </div>
-    <table class="table table-striped table-bordered">
+    <input type="text" id="busquedaPatria" class="form-control mb-2" placeholder="Buscar en la tabla...">
+    <table id="datosPatriaTabla" class="table table-striped table-bordered">
       <thead class="thead-dark">
         <tr>
           <th>Fecha de nacimiento</th>
@@ -135,5 +137,26 @@
   <!-- Agregar script de Bootstrap JS para funcionalidades adicionales -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Script para búsqueda en la tabla -->
+  <script>
+    $(document).ready(function(){
+      $('#busquedaClap').on('keyup', function(){
+        var valor = $(this).val().toLowerCase();
+        $('#datosClapTabla tbody tr').filter(function(){
+          $(this).toggle($(this).text().toLowerCase().indexOf(valor) > -1)
+        });
+      });
+
+      $('#busquedaPatria').on('keyup', function(){
+        var valor = $(this).val().toLowerCase();
+        $('#datosPatriaTabla tbody tr').filter(function(){
+          $(this).toggle($(this).text().toLowerCase().indexOf(valor) > -1)
+        });
+      });
+    });
+  </script>
+</body>
+</html>
 
