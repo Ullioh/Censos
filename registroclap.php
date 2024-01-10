@@ -26,7 +26,8 @@ $sql = "INSERT INTO datos_clap (manzana, grupo_familiar, nacionalidad, cedula_id
         VALUES ('$manzana', '$grupo', '$nacionalidad', '$cedula', '$nombre', $edad, '$sexo')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Datos guardados correctamente";
+    header("Location: principal.php");
+        exit();
 } else {
     echo "Error al guardar los datos: " . $conn->error;
 }

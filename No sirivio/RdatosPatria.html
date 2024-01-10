@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrar Datos Carnet de la Patria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Gris suave para el fondo */
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            text-align: left;
+            color: #dc3545; /* Rojo suave para el título */
+        }
+        form {
+            background-color: #ffffff; /* Blanco para el formulario */
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            padding: 20px;
+            max-width: 400px;
+            margin: 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #495057; /* Gris suave para las etiquetas */
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select,
+        input[type="date"] {
+            width: calc(100% - 12px);
+            padding: 6px;
+            margin-bottom: 10px;
+            border: 1px solid #ced4da; /* Gris suave para los campos de entrada */
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #dc3545; /* Rojo suave para el botón */
+            color: #ffffff; /* Texto blanco para el botón */
+            padding: 8px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #c82333; /* Cambio de color al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Registrar Datos Carnet de la Patria</h2>
+
+    <form method="POST" action="guardar_datos_patria.php" style="margin-left: 20px;">
+        <label for="date">Fecha de nacimiento:</label>
+        <input type="date" name="date" id="date" required><br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" name="telefono" id="telefono" required><br><br>
+
+        <label for="Tpersona">Tipo de persona:</label>
+        <select name="Tpersona" id="Tpersona">
+            <option value="Jefe">Jefe</option>
+            <option value="Miembro">Miembro</option>
+        </select><br><br>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" name="email" id="email" required><br><br>
+
+        <label for="manzana">¿Es manzanero?:</label>
+        <select name="manzana" id="manzana">
+            <option value="Si">Sí</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label for="code">Código:</label>
+        <input type="number" name="code" id="code" required><br><br>
+
+        <label for="serial">Serial:</label>
+        <input type="number" name="serial1" id="serial1" required><br><br>
+        
+        <label for="Nintegrantes">Número de integrantes de la familia:</label>
+        <input type="number" name="Nintegrantes" id="Nintegrantes" required><br><br>
+
+        <input type="submit" value="Agregar">
+    </form>
+
+</body>
+</html>

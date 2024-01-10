@@ -27,7 +27,8 @@ $sql = "INSERT INTO carnet_patria (fecha_nacimiento, telefono, tipo_persona, cor
         VALUES ('$date', '$telefono', '$Tpersona', '$email', '$manzana', '$code', '$serial1', '$Nintegrantes')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Datos guardados correctamente";
+    header("Location: principal.php");
+        exit();
 } else {
     echo "Error al guardar los datos: " . $conn->error;
 }
