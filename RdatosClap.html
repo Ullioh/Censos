@@ -5,24 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla con PHP</title>
+    <!-- Agregar enlaces a Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             background-color: #f8f9fa; /* Color gris suave para el fondo */
-            height: 100vh; /* Altura del 100% de la ventana */
-            display: flex;
-            align-items: center;
-            justify-content: flex-start; /* Alineado a la izquierda */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cambio de fuente */
-            padding-left: 20px; /* Espacio en el lado izquierdo */
+            padding: 20px; /* Espacio alrededor del formulario */
         }
         form {
             background-color: #ffffff; /* Color blanco para el formulario */
             border-radius: 5px;
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
             padding: 20px;
-            width: 300px; /* Ancho del formulario */
             text-align: center;
-            margin: 20px; /* Espacio alrededor del formulario */
         }
         label {
             color: #495057; /* Color gris suave para las etiquetas */
@@ -31,49 +27,54 @@
         input[type="number"],
         input[type="submit"],
         select {
-            width: calc(100% - 20px); /* Ancho del 100% con un pequeño ajuste para el borde */
             margin-bottom: 10px;
-            padding: 8px;
-            border: 1px solid #ccc;
             border-radius: 4px;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            background-color: #dc3545; /* Color rojo suave para el botón */
-            border-color: #dc3545;
-            color: #ffffff; /* Texto blanco para el botón */
-            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <form method="POST" action="registroclap.php">
+    <form method="POST" action="registroclap.php" class="container" style="max-width: 400px;">
         <h2>Ingresa los datos</h2>
-        <label for="manzana">N de manzana:</label>
-        <input type="text" name="manzana" id="manzana" required><br><br>
+        <div class="form-group">
+            <label for="manzana">N de manzana:</label>
+            <input type="text" name="manzana" id="manzana" class="form-control" required>
+        </div>
 
-        <label for="grupo">Grupo familiar:</label>
-        <input type="text" name="grupo" id="grupo" required><br><br>
+        <div class="form-group">
+            <label for="grupo">Grupo familiar:</label>
+            <input type="text" name="grupo" id="grupo" class="form-control" required>
+        </div>
 
-        <label for="nacionalidad">Nacionalidad:</label>
-        <input type="text" name="nacionalidad" id="nacionalidad" required><br><br>
+        <div class="form-group">
+            <label for="nacionalidad">Nacionalidad:</label>
+            <input type="text" name="nacionalidad" id="nacionalidad" class="form-control" required>
+        </div>
 
-        <label for="cedula">Cédula de identidad:</label>
-        <input type="text" name="cedula" id="cedula" required><br><br>
+        <div class="form-group">
+            <label for="cedula">Cédula de identidad:</label>
+            <input type="text" name="cedula" id="cedula" class="form-control" required>
+        </div>
 
-        <label for="nombre">Nombre y apellido:</label>
-        <input type="text" name="nombre" id="nombre" required><br><br>
+        <div class="form-group">
+            <label for="nombre">Nombre y apellido:</label>
+            <input type="text" name="nombre" id="nombre" class="form-control" required>
+        </div>
 
-        <label for="edad">Edad:</label>
-        <input type="number" name="edad" id="edad" required><br><br>
+        <div class="form-group">
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" id="edad" class="form-control" required>
+        </div>
 
-        <label for="sexo">Sexo:</label>
-        <select name="sexo" id="sexo">
-            <option value="Masculino">Masculino</option>
-            <option value="Femenino">Femenino</option>
-        </select><br><br>
+        <div class="form-group">
+            <label for="sexo">Sexo:</label>
+            <select name="sexo" id="sexo" class="form-control">
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+            </select>
+        </div>
 
-        <input type="submit" value="Agregar">
+        <input type="submit" value="Agregar" class="btn btn-danger btn-block">
     </form>
 </body>
 </html>
+

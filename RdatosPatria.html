@@ -5,24 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla con PHP</title>
+    <!-- Agregar enlaces a Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             background-color: #f8f9fa; /* Color gris suave para el fondo */
-            height: 100vh; /* Altura del 100% de la ventana */
-            display: flex;
-            align-items: center;
-            justify-content: flex-start; /* Alineado a la izquierda */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cambio de fuente */
-            padding-left: 20px; /* Espacio en el lado izquierdo */
+            padding: 20px; /* Espacio alrededor del formulario */
         }
         form {
             background-color: #ffffff; /* Color blanco para el formulario */
             border-radius: 5px;
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
             padding: 20px;
-            width: 300px; /* Ancho del formulario */
             text-align: center;
-            margin: 20px; /* Espacio alrededor del formulario */
+            max-width: 400px; /* Ancho máximo del formulario */
+            margin: 20px auto; /* Centrado horizontalmente */
         }
         label {
             color: #495057; /* Color gris suave para las etiquetas */
@@ -33,55 +31,61 @@
         input[type="email"],
         select,
         input[type="date"] {
-            width: calc(100% - 20px); /* Ancho del 100% con un pequeño ajuste para el borde */
             margin-bottom: 10px;
-            padding: 8px;
-            border: 1px solid #ccc;
             border-radius: 4px;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            background-color: #dc3545; /* Color rojo suave para el botón */
-            border-color: #dc3545;
-            color: #ffffff; /* Texto blanco para el botón */
-            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <form method="POST" action="RdatosPatria.php">
         <h2>Ingresa los datos</h2>
-        <label for="date">Fecha de nacimiento:</label>
-        <input type="date" name="date" id="date" required><br><br>
+        <div class="form-group">
+            <label for="date">Fecha de nacimiento:</label>
+            <input type="date" name="date" id="date" class="form-control" required>
+        </div>
 
-        <label for="telefono">Telefono:</label>
-        <input type="text" name="telefono" id="telefono" required><br><br>
+        <div class="form-group">
+            <label for="telefono">Telefono:</label>
+            <input type="text" name="telefono" id="telefono" class="form-control" required>
+        </div>
 
-        <label for="Tpersona">Tipo de persona:</label>
-        <select type="text" name="Tpersona" id="Tpersona">
-            <option value="Jefe">Jefe</option>
-            <option value="Miembro">Miembro</option>
-        </select><br><br>
+        <div class="form-group">
+            <label for="Tpersona">Tipo de persona:</label>
+            <select type="text" name="Tpersona" id="Tpersona" class="form-control">
+                <option value="Jefe">Jefe</option>
+                <option value="Miembro">Miembro</option>
+            </select>
+        </div>
 
-        <label for="email">Correo Electronico:</label>
-        <input type="email" name="email" id="email" required><br><br>
+        <div class="form-group">
+            <label for="email">Correo Electronico:</label>
+            <input type="email" name="email" id="email" class="form-control" required>
+        </div>
 
-        <label for="manzana">¿Es manzanero?:</label>
-        <select type="text" name="manzana" id="manzana">
-            <option value="Si">Si</option>
-            <option value="No">No</option>
-        </select><br><br>
+        <div class="form-group">
+            <label for="manzana">¿Es manzanero?:</label>
+            <select type="text" name="manzana" id="manzana" class="form-control">
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+            </select>
+        </div>
 
-        <label for="code">Codigo:</label>
-        <input type="number" name="code" id="code" required><br><br>
+        <div class="form-group">
+            <label for="code">Codigo:</label>
+            <input type="number" name="code" id="code" class="form-control" required>
+        </div>
 
-        <label for="serial">Serial:</label>
-        <input type="number" name="serial1" id="serial1" required><br><br>
+        <div class="form-group">
+            <label for="serial">Serial:</label>
+            <input type="number" name="serial1" id="serial1" class="form-control" required>
+        </div>
         
-        <label for="Nintegrantes">Numero de integrantes de la familia:</label>
-        <input type="number" name="Nintegrantes" id="Nintegrantes" required><br><br>
+        <div class="form-group">
+            <label for="Nintegrantes">Numero de integrantes de la familia:</label>
+            <input type="number" name="Nintegrantes" id="Nintegrantes" class="form-control" required>
+        </div>
 
-        <input type="submit" value="Agregar">
+        <input type="submit" value="Agregar" class="btn btn-danger btn-block">
     </form>
 </body>
 </html>
