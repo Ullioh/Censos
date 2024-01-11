@@ -9,16 +9,21 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa; /* Color gris suave para el fondo */
+            background-image: url('S.jpg'); /* Reemplaza 'tu-imagen-de-fondo.jpg' con la ruta de tu imagen */
+            background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
+            background-position: left; /* Ajusta la posición de la imagen a la izquierda */
+            background-repeat: no-repeat; /* Evita la repetición de la imagen */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cambio de fuente */
             padding: 20px; /* Espacio alrededor del formulario */
         }
         form {
-            background-color: #ffffff; /* Color blanco para el formulario */
+            background-color: rgba(255, 255, 255, 0.8); /* Color blanco semi-transparente para el formulario */
             border-radius: 5px;
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
             padding: 20px;
             text-align: center;
+            max-width: 400px; /* Reducción del ancho del formulario */
+            margin: 0;
         }
         label {
             color: #495057; /* Color gris suave para las etiquetas */
@@ -33,7 +38,7 @@
     </style>
 </head>
 <body>
-    <form method="POST" action="registroclap.php" class="container" style="max-width: 400px;">
+    <form method="POST" action="registroclap.php">
         <h2>Ingresa los datos</h2>
         <div class="form-group">
             <label for="manzana">N de manzana:</label>
@@ -77,4 +82,7 @@
     </form>
 </body>
 </html>
+
+
+
 
